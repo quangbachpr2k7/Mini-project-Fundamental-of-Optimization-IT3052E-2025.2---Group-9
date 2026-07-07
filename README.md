@@ -13,7 +13,7 @@ The framework utilizes optimized graph representations, dynamic data structures,
 
 ## ⚙️ General Requirements & Environment Setup
 
-The repository is built natively using **Python 3**. While the heuristic, meta-heuristic, and local search variants run entirely on standard libraries, the exact mathematical optimization models require external solvers.
+The repository is built natively using **Python 3**, but it is better to use **Python 3.12** or later to ensure the stability. While the **Heuristic**, **Meta-heuristics**, and **Additional methods** run entirely on standard libraries, the **Exact methods** require external solvers.
 
 ```bash
 # Required to execute Exact Methods (LP, CP models)
@@ -47,7 +47,7 @@ These approaches guarantee a mathematically proven global optimal solution by ex
 >   * In `03_CP.py`: Locate `solver.parameters.max_time_in_seconds = 30.0`.
 > * **Scalability Threshold:** `01_Backtracking.py` scales exponentially ($O(M^N)$). It should strictly be reserved for small verification instances ($N \le 20$).
 
-### 2. Heuristic Frameworks
+### 2. Heuristic
 When immediate execution is vital, constructive heuristics generate high-quality feasible schedules within milliseconds.
 
 * **`04_Heuristic.py`**: An advanced Greedy algorithm driven by an structural graph analysis. It pre-calculates structural task weights by tracking the total down-stream successor tree through a bitwise Dynamic Programming (DP) closure over the directed acyclic graph (DAG). Tasks are ordered dynamically based on execution critical paths and assigned to minimizing teams.
