@@ -74,7 +74,7 @@ Designed for large-scale problems, these algorithms explore the search space bro
 >   * **Tabu:** Change the memory size `tabu_tenure = 10` or neighborhood size `num_neighbors = 10`.
 >   * **ACO:** Tune `num_ants = 10`, evaporation rate `rho = 0.1`, pheromone weight `alpha = 1.0`, or heuristic weight `beta = 2.0`.
 
-### 4. Local Search Methods
+### 4. Adđitional Methods (Local Search Methods)
 These methods focus on intensively improving the neighborhood of an existing solution to find better results quickly.
 
 * **`10_IteratedLocalSearch.py`**: Iterated Local Search (ILS). Uses Variable Neighborhood Descent (VND) for deep local optimization, combined with random perturbation (shaking) steps to kick the solution into new areas.
